@@ -3,10 +3,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'images.unsplash.com',
+        hostname: "cloudflare-ipfs.com",
       },
       {
-        hostname: 'source.unsplash.com',
+        hostname: "source.unsplash.com",
       },
     ],
   },
