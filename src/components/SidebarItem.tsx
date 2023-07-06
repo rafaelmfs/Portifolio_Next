@@ -12,7 +12,7 @@ export function SidebarItem({ link, children, active, ...props }: SidebarItemPro
     <Link href={link}>
       <button
         data-active={active}
-        className="hover:text-zinc-300 hover:drop-shadow-md transition-colors data-[active='true']:drop-shadow-md data-[active='true']:text-zinc-100"
+        className="hover:text-zinc-300 hover:drop-shadow-md transition-colors data-[active='true']:drop-shadow-md data-[active='true']:text-zinc-100 active:animate-ping"
         {...props}
       >
         {children}

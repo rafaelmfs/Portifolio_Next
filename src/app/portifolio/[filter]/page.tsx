@@ -74,7 +74,7 @@ export default function Portifolio() {
     <PageContainer className="overflow-y-auto">
       <PageTitle text="Portifolio" />
 
-      <div className="flex flex-col items-center justify-center gap-6 pt-4 pl-4 mt-4 overflow-y-auto">
+      <div className="flex flex-col items-center justify-center w-full gap-6 pt-4 pl-4 mt-4">
         <FilterList
           items={items}
         />

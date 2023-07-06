@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HTMLAttributes } from "react";
 
 interface GalleryProps extends HTMLAttributes<HTMLDivElement> {
@@ -9,20 +10,22 @@ interface GalleryProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export function Gallery({ images, ...props }: GalleryProps) {
-  const gridLength = images.length / 4 > 1 ? 4 : 2
+  const gridColumnsLength = images.length / 4 > 1 ? "grid-cols-4" : "grid-cols-2"
 
   return (
     <div
-      className={`grid max-h-full grid-cols-${gridLength} gap-8 px-4`}
+      className={`grid ${gridColumnsLength} gap-8 px-4`}
       {...props}
     >
       {
         images.map(image => (
-          <img
+          <Image
             className="object-cover aspect-square"
             key={image.id}
             src={image.src}
             alt={image.alt}
+            width={400}
+            height={400}
           />
 
         ))
